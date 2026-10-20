@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160" width="480" height="160" role="img" aria-labelledby="title">
+  <title id="title">A girl winds up, kicks the ball, and scores a goal</title>
+  <style>
+    .a { animation-duration: 5s; animation-iteration-count: infinite; animation-timing-function: linear; }
+    .scene { animation-name: scene; }
+    .girlX { animation-name: girlX; }
+    .girlY { animation-name: girlY; }
+    .lean { animation-name: lean; transform-origin: 0px 121px; }
+    .legA { animation-name: legA; transform-origin: 0px 121px; }
+    .legB { animation-name: legB; transform-origin: 0px 121px; }
+    .shinA { animation-name: shinA; transform-origin: 0px 128.5px; }
+    .shinB { animation-name: shinB; transform-origin: 0px 128.5px; }
+    .armA { animation-name: armA; transform-origin: 0px 100px; }
+    .armB { animation-name: armB; transform-origin: 0px 100px; }
+    .pony { animation-name: pony; transform-origin: -6px 84px; }
+    .ballX { animation-name: ballX; }
+    .ballY { animation-name: ballY; }
+    .spin { animation-name: spin; }
+    .trail { animation-name: trail; }
+    .ballShadow { animation-name: ballShadow; }
+    .net { animation-name: net; transform-origin: 405px 106px; }
+    .happy { animation-name: happy; opacity: 0; }
+    .focused { animation-name: focused; }
+    .cf { animation-name: cf; transform-box: fill-box; transform-origin: center; opacity: 0; }
+
+    .limbO { stroke: #9a6b52; stroke-width: 5.5; stroke-linecap: round; }
+    .limb { stroke: #f3c9a8; stroke-width: 3.5; stroke-linecap: round; }
+    .sock { stroke: #e68a94; stroke-width: 3.5; stroke-linecap: round; }
+    .shoe { fill: #f59f00; stroke: #9a5d00; stroke-width: 0.8; }
+    .muted { stroke: #8b949e; }
+
+    @keyframes scene { 0% { opacity: 0; } 4% { opacity: 1; } 86% { opacity: 1; } 94% { opacity: 0; } 100% { opacity: 0; } }
+
+    @keyframes girlX { 0% { transform: translateX(0); } 22% { transform: translateX(96px); } 94% { transform: translateX(96px); } 100% { transform: translateX(0); } }
+
+    @keyframes girlY {
+      0%, 5.5%, 11%, 16.5%, 22%, 27% { transform: translateY(0); }
+      2.75%, 8.25%, 13.75%, 19.25% { transform: translateY(-2.5px); }
+      24% { transform: translateY(1px); }
+      50% { transform: translateY(0); animation-timing-function: ease-out; }
+      56% { transform: translateY(-17px); animation-timing-function: ease-in; }
+      62% { transform: translateY(0); animation-timing-function: ease-out; }
+      68% { transform: translateY(-17px); animation-timing-function: ease-in; }
+      74%, 100% { transform: translateY(0); }
+    }
+
+    /* Kick: plant foot lands at 22%, wind-up peaks at 23.5% (heel up behind),
+       knee snaps through on contact at 26%, follow-through at 29.5%. */
+    @keyframes legA {
+0% { transform: rotate(30deg); } 5.5% { transform: rotate(-30deg); } 11% { transform: rotate(30deg); } 16.5% { transform: rotate(-30deg); }
+      19% { transform: rotate(5deg); }
+      23.5% { transform: rotate(60deg); animation-timing-function: ease-in; }
+      26% { transform: rotate(-25deg); animation-timing-function: ease-out; }
+      29.5% { transform: rotate(-85deg); }
+      34% { transform: rotate(-30deg); } 40% { transform: rotate(0deg); }
+      50% { transform: rotate(0deg); } 56% { transform: rotate(12deg); } 62% { transform: rotate(0deg); } 68% { transform: rotate(12deg); } 74% { transform: rotate(0deg); }
+      94% { transform: rotate(0deg); } 100% { transform: rotate(30deg); }
+    }
+    @keyframes shinA {
+0% { transform: rotate(60deg); } 2.75% { transform: rotate(30deg); } 5.5% { transform: rotate(10deg); } 8.25% { transform: rotate(40deg); }
+      11% { transform: rotate(60deg); } 13.75% { transform: rotate(30deg); } 16.5% { transform: rotate(10deg); }
+      19% { transform: rotate(60deg); }
+      23.5% { transform: rotate(95deg); animation-timing-function: ease-in; }
+      26% { transform: rotate(10deg); animation-timing-function: ease-out; }
+      29.5% { transform: rotate(0deg); } 34% { transform: rotate(25deg); } 40% { transform: rotate(0deg); }
+      50% { transform: rotate(0deg); } 56% { transform: rotate(45deg); } 62% { transform: rotate(0deg); } 68% { transform: rotate(45deg); } 74% { transform: rotate(0deg); }
+      94% { transform: rotate(0deg); } 100% { transform: rotate(60deg); }
+    }
+    @keyframes legB {
+0% { transform: rotate(-30deg); } 5.5% { transform: rotate(30deg); } 11% { transform: rotate(-30deg); } 16.5% { transform: rotate(30deg); }
+      19% { transform: rotate(10deg); } 22%, 29.5% { transform: rotate(-10deg); } 34% { transform: rotate(-5deg); } 40% { transform: rotate(0deg); }
+      50% { transform: rotate(0deg); } 56% { transform: rotate(-15deg); } 62% { transform: rotate(0deg); } 68% { transform: rotate(-15deg); } 74% { transform: rotate(0deg); }
+      94% { transform: rotate(0deg); } 100% { transform: rotate(-30deg); }
+    }
+    @keyframes shinB {
+0% { transform: rotate(10deg); } 2.75% { transform: rotate(40deg); } 5.5% { transform: rotate(60deg); } 8.25% { transform: rotate(30deg); }
+      11% { transform: rotate(10deg); } 13.75% { transform: rotate(40deg); } 16.5% { transform: rotate(60deg); }
+      19% { transform: rotate(35deg); } 22% { transform: rotate(12deg); } 26% { transform: rotate(15deg); } 29.5% { transform: rotate(8deg); }
+      34% { transform: rotate(4deg); } 40% { transform: rotate(0deg); }
+      50% { transform: rotate(0deg); } 56% { transform: rotate(45deg); } 62% { transform: rotate(0deg); } 68% { transform: rotate(45deg); } 74% { transform: rotate(0deg); }
+      94% { transform: rotate(0deg); } 100% { transform: rotate(10deg); }
+    }
+    /* Upper body: leans into the run, stays tall in the wind-up, leans back through the strike */
+    @keyframes lean {
+      0%, 16.5% { transform: rotate(5deg); } 19% { transform: rotate(3deg); }
+      23.5% { transform: rotate(2deg); animation-timing-function: ease-in; }
+      26% { transform: rotate(-10deg); animation-timing-function: ease-out; }
+      29.5% { transform: rotate(-14deg); } 36% { transform: rotate(-2deg); }
+      42%, 94% { transform: rotate(0deg); } 100% { transform: rotate(5deg); }
+    }
+    /* Arms open wide for balance during the kick, then go up to celebrate */
+    @keyframes armA {
+0% { transform: rotate(-35deg); } 5.5% { transform: rotate(35deg); } 11% { transform: rotate(-35deg); } 16.5% { transform: rotate(35deg); }
+      19% { transform: rotate(0deg); } 23.5% { transform: rotate(-80deg); } 26% { transform: rotate(-95deg); } 29.5% { transform: rotate(-70deg); }
+      36% { transform: rotate(-10deg); } 48% { transform: rotate(0deg); }
+      52% { transform: rotate(-125deg); } 60% { transform: rotate(-115deg); } 68% { transform: rotate(-135deg); } 76% { transform: rotate(-125deg); }
+      94% { transform: rotate(-125deg); } 100% { transform: rotate(-35deg); }
+    }
+    @keyframes armB {
+0% { transform: rotate(35deg); } 5.5% { transform: rotate(-35deg); } 11% { transform: rotate(35deg); } 16.5% { transform: rotate(-35deg); }
+      19% { transform: rotate(20deg); } 23.5% { transform: rotate(75deg); } 26% { transform: rotate(100deg); } 29.5% { transform: rotate(85deg); }
+      36% { transform: rotate(10deg); } 48% { transform: rotate(0deg); }
+      52% { transform: rotate(125deg); } 60% { transform: rotate(115deg); } 68% { transform: rotate(135deg); } 76% { transform: rotate(125deg); }
+      94% { transform: rotate(125deg); } 100% { transform: rotate(35deg); }
+    }
+    @keyframes pony {
+      0%, 5.5%, 11%, 16.5%, 22% { transform: rotate(0deg); }
+      3.5%, 9%, 14.5%, 20% { transform: rotate(12deg); }
+      25% { transform: rotate(16deg); } 28% { transform: rotate(-12deg); }
+      32% { transform: rotate(7deg); } 38% { transform: rotate(0deg); }
+      50% { transform: rotate(0deg); } 56% { transform: rotate(18deg); } 62% { transform: rotate(-10deg); } 68% { transform: rotate(18deg); } 74% { transform: rotate(-5deg); }
+      80%, 100% { transform: rotate(0deg); }
+    }
+
+    @keyframes ballX { 0%, 26% { transform: translateX(0); } 47% { transform: translateX(262px); } 50% { transform: translateX(268px); } 94% { transform: translateX(268px); } 100% { transform: translateX(0); } }
+    @keyframes ballY {
+      0%, 26% { transform: translateY(0); animation-timing-function: ease-out; }
+      37% { transform: translateY(-42px); animation-timing-function: ease-in; }
+      47%, 50% { transform: translateY(-35px); animation-timing-function: ease-in; }
+      56% { transform: translateY(0); animation-timing-function: ease-out; }
+      59% { transform: translateY(-5px); animation-timing-function: ease-in; }
+      62%, 100% { transform: translateY(0); }
+    }
+    @keyframes spin { 0%, 26% { transform: rotate(0deg); } 50% { transform: rotate(900deg); } 62%, 94% { transform: rotate(960deg); } 100% { transform: rotate(0deg); } }
+    @keyframes trail { 0%, 26.5% { opacity: 0; } 28%, 44% { opacity: 0.8; } 47%, 100% { opacity: 0; } }
+    @keyframes ballShadow { 0%, 26.5% { opacity: 0.35; } 33% { opacity: 0.1; } 50% { opacity: 0.12; } 56%, 100% { opacity: 0.35; } }
+
+    @keyframes net { 0%, 47% { transform: scaleX(1); } 50% { transform: scaleX(1.12); } 55% { transform: scaleX(0.97); } 60%, 100% { transform: scaleX(1); } }
+
+    @keyframes happy { 0%, 54% { opacity: 0; } 60%, 88% { opacity: 1; } 94%, 100% { opacity: 0; } }
+    @keyframes focused { 0%, 54% { opacity: 1; } 60%, 88% { opacity: 0; } 94%, 100% { opacity: 1; } }
+    @keyframes cf {
+      0%, 47% { opacity: 0; transform: translate(0, 0) rotate(0deg); }
+      48% { opacity: 1; transform: translate(0, 0) rotate(0deg); animation-timing-function: ease-out; }
+      60% { opacity: 1; transform: translate(var(--dx), var(--dy)) rotate(var(--r)); animation-timing-function: ease-in; }
+      76% { opacity: 0; transform: translate(var(--dx), calc(var(--dy) + 30px)) rotate(calc(var(--r) * 2)); }
+      100% { opacity: 0; transform: translate(0, 0) rotate(0deg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) { .a { animation: none !important; } }
+  </style>
+
+  <g class="a scene">
+    <!-- pitch -->
+    <line class="muted" x1="8" y1="140.5" x2="472" y2="140.5" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <g stroke="#89ac95" stroke-width="1.2" stroke-linecap="round" fill="none">
+      <path d="M14 140l1.5-5M17 140v-6M20 140l-1.5-5"/>
+      <path d="M38 140l1.2-4M40.5 140v-5M43 140l-1.2-4"/>
+      <path d="M62 140l1-4M65 140l-1-5"/>
+      <path d="M90 140l1.5-5M93 140v-6M96 140l-1.5-5"/>
+      <path d="M116 140l1.2-4M118.5 140v-5M121 140l-1.2-4"/>
+      <path d="M144 140l1-4M147 140l-1-5"/>
+      <path d="M174 140l1.5-5M177 140v-6M180 140l-1.5-5"/>
+      <path d="M202 140l1.2-4M204.5 140v-5M207 140l-1.2-4"/>
+      <path d="M232 140l1-4M235 140l-1-5"/>
+      <path d="M260 140l1.5-5M263 140v-6M266 140l-1.5-5"/>
+      <path d="M288 140l1.2-4M290.5 140v-5M293 140l-1.2-4"/>
+      <path d="M316 140l1-4M319 140l-1-5"/>
+      <path d="M344 140l1.5-5M347 140v-6M350 140l-1.5-5"/>
+      <path d="M372 140l1.2-4M374.5 140v-5M377 140l-1.2-4"/>
+      <path d="M428 140l1-4M431 140l-1-5"/>
+      <path d="M450 140l1.5-5M453 140v-6M456 140l-1.5-5"/>
+    </g>
+
+    <!-- goal: net bulges when the ball hits -->
+    <g class="a net muted" fill="none" stroke-linecap="round">
+      <g stroke-width="0.8" opacity="0.55">
+        <path d="M414.4 73.6L416.4 140M423.8 75.2L427.8 140M433.2 76.8L439.2 140M442.6 78.4L450.6 140"/>
+        <path d="M405 85.6L454 92M405 99.2L456 104M405 112.8L458 116M405 126.4L460 128"/>
+      </g>
+      <path d="M405 72L452 80L462 140" stroke-width="3"/>
+    </g>
+    <line class="muted" x1="405" y1="72" x2="405" y2="140" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- ball -->
+    <g class="a ballX">
+      <ellipse class="a ballShadow" cx="170" cy="140.5" rx="6" ry="1.5" fill="#8b949e" opacity="0.35"/>
+      <g class="a ballY">
+        <g transform="translate(170 133.5)">
+          <g class="a trail muted" stroke-width="1.4" stroke-linecap="round" opacity="0">
+            <path d="M-12-2h-10M-12 2.5h-14M-14-6h-6"/>
+          </g>
+          <g class="a spin">
+            <circle r="6.5" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/>
+            <polygon points="0,-2.6 2.5,-0.8 1.5,2.1 -1.5,2.1 -2.5,-0.8" fill="#24292f"/>
+            <path d="M0-2.6v-3.6M2.5-0.8l3.4-1.1M1.5 2.1l2.1 2.9M-1.5 2.1l-2.1 2.9M-2.5-0.8l-3.4-1.1" stroke="#24292f" stroke-width="0.9"/>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- girl: legB plants, legA kicks (hip at 0,121 / knee at 0,128.5) -->
+    <g class="a girlX">
+      <ellipse cx="60" cy="140.5" rx="10" ry="1.8" fill="#8b949e" opacity="0.3"/>
+      <g class="a girlY">
+        <g transform="translate(60 0)">
+          <g class="a lean">
+            <g class="a armB"><line class="limbO" x1="0" y1="100" x2="0" y2="114"/><line class="limb" x1="0" y1="100" x2="0" y2="114"/></g>
+          </g>
+          <g class="a legB">
+            <line class="limbO" x1="0" y1="121" x2="0" y2="128.5"/><line class="limb" x1="0" y1="121" x2="0" y2="128.5"/>
+            <g class="a shinB">
+              <line class="limbO" x1="0" y1="128.5" x2="0" y2="136"/><line class="limb" x1="0" y1="128.5" x2="0" y2="136"/>
+              <line class="sock" x1="0" y1="131" x2="0" y2="136"/>
+              <rect class="shoe" x="-2.5" y="136" width="8" height="4" rx="2"/>
+            </g>
+          </g>
+          <g class="a legA">
+            <line class="limbO" x1="0" y1="121" x2="0" y2="128.5"/><line class="limb" x1="0" y1="121" x2="0" y2="128.5"/>
+            <g class="a shinA">
+              <line class="limbO" x1="0" y1="128.5" x2="0" y2="136"/><line class="limb" x1="0" y1="128.5" x2="0" y2="136"/>
+              <line class="sock" x1="0" y1="131" x2="0" y2="136"/>
+              <rect class="shoe" x="-2.5" y="136" width="8" height="4" rx="2"/>
+            </g>
+          </g>
+          <g class="a lean">
+            <line class="limbO" x1="0" y1="94" x2="0" y2="99"/><line class="limb" x1="0" y1="94" x2="0" y2="99"/>
+            <path d="M-6.5 98Q0 95.5 6.5 98L7.5 119H-7.5Z" fill="#e68a94" stroke="#b85f70"/>
+          </g>
+          <path d="M-7.5 117H7.5L8 125H1L0 122L-1 125H-8Z" fill="#778cab" stroke="#536987"/>
+          <g class="a lean">
+            <g class="a armA"><line class="limbO" x1="0" y1="100" x2="0" y2="114"/><line class="limb" x1="0" y1="100" x2="0" y2="114"/></g>
+            <g class="a pony">
+              <path d="M-6 82C-14 79-20 84-19 93C-16 89-12 88-7 87Z" fill="#6b4430" stroke="#4a2e20" stroke-width="0.8"/>
+              <circle cx="-7" cy="84" r="1.8" fill="#e68a94"/>
+            </g>
+            <circle cx="1" cy="87" r="9" fill="#f3c9a8" stroke="#9a6b52" stroke-width="1.3"/>
+            <path d="M9 84A9 9 0 1 0-7.5 91Q-3 86 2 85.5Q6 85 9 84Z" fill="#6b4430" stroke="#4a2e20" stroke-width="0.8"/>
+            <path d="M-7.5 83.5Q-15 76-13 84Q-12 87-7.5 84Q-5 77-2 79Q0 82-7.5 84Z" fill="#e68a94" stroke="#b85f70" stroke-width=".6"/>
+            <circle cx="-7.5" cy="83.7" r="1.4" fill="#f8c5c5"/>
+            <circle class="a focused" cx="6" cy="87.5" r="1.1" fill="#3a2a22"/>
+            <path class="a happy" d="M4.7 88q1.4-2.3 2.8 0" fill="none" stroke="#3a2a22" stroke-width="1" stroke-linecap="round"/>
+            <path class="a happy" d="M5.7 91.2q1.8 3.8 3.6-.2Z" fill="#b85f70"/>
+            <circle cx="4.5" cy="90.8" r="1.9" fill="#eea4ad" opacity="0.6"/>
+            <path class="a focused" d="M6.3 91.8q1.5 1.2 3 0" fill="none" stroke="#9a6b52" stroke-width="0.8" stroke-linecap="round"/>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- confetti -->
+    <g>
+      <rect class="a cf" x="431" y="97" width="3" height="5" fill="#e9be76" style="--dx:-58px;--dy:-52px;--r:200deg"/>
+      <circle class="a cf" cx="432" cy="99" r="1.7" fill="#99b6cd" style="--dx:-40px;--dy:-62px;--r:0deg"/>
+      <rect class="a cf" x="431" y="97" width="3" height="5" fill="#eea4ad" style="--dx:-22px;--dy:-58px;--r:-160deg"/>
+      <circle class="a cf" cx="432" cy="99" r="1.7" fill="#a7c5a7" style="--dx:-6px;--dy:-66px;--r:0deg"/>
+      <rect class="a cf" x="431" y="97" width="3" height="5" fill="#99b6cd" style="--dx:10px;--dy:-48px;--r:220deg"/>
+      <circle class="a cf" cx="432" cy="99" r="1.7" fill="#e9be76" style="--dx:-70px;--dy:-30px;--r:0deg"/>
+      <rect class="a cf" x="431" y="97" width="3" height="5" fill="#a7c5a7" style="--dx:-48px;--dy:-24px;--r:-240deg"/>
+      <circle class="a cf" cx="432" cy="99" r="1.7" fill="#eea4ad" style="--dx:-30px;--dy:-40px;--r:0deg"/>
+      <rect class="a cf" x="431" y="97" width="3" height="5" fill="#e9be76" style="--dx:-12px;--dy:-34px;--r:180deg"/>
+      <circle class="a cf" cx="432" cy="99" r="1.7" fill="#99b6cd" style="--dx:14px;--dy:-30px;--r:0deg"/>
+    </g>
+  </g>
+</svg>

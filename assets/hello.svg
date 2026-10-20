@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 74" width="440" height="74" role="img" aria-labelledby="hello-title">
+  <title id="hello-title">Hello, I'm Yuki — a tech girl &amp; football lover</title>
+  <style>
+    .in { animation: in 0.6s ease-out both; }
+    /* a friendly wave from the wrist, then a short rest */
+    .wave { transform-box: fill-box; transform-origin: 70% 80%; animation: wave 3s ease-in-out 0.6s infinite; }
+    @keyframes in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    @keyframes wave {
+      0% { transform: rotate(0deg); } 8% { transform: rotate(16deg); } 16% { transform: rotate(-8deg); }
+      24% { transform: rotate(16deg); } 32% { transform: rotate(-4deg); } 40% { transform: rotate(10deg); }
+      50%, 100% { transform: rotate(0deg); }
+    }
+    @media (prefers-reduced-motion: reduce) { .in, .wave { animation: none; } }
+  </style>
+  <g class="in">
+    <text x="2" y="36" font-size="30" font-weight="700" textLength="232" lengthAdjust="spacingAndGlyphs" fill="#dc7180" font-family="'Arial Rounded MT Bold','Nunito','Varela Round','Helvetica Neue',Arial,sans-serif">Hello, I'm Yuki</text>
+    <text class="wave" x="244" y="38" font-size="30">👋</text>
+    <text x="2" y="60" font-size="17" fill="#c96a79" font-family="'Arial Rounded MT Bold','Nunito','Varela Round','Helvetica Neue',Arial,sans-serif">a tech girl 💻 &amp; football lover ⚽</text>
+  </g>
+</svg>

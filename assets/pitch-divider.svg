@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 18" width="600" height="18" role="img" aria-label="A ball rolling along the pitch">
+  <style>
+    .roll { animation: roll 12s linear infinite; }
+    .spin { animation: spin 12s linear infinite; }
+    @keyframes roll {
+      0% { transform: translateX(0); opacity: 0; }
+      4% { opacity: 1; } 92% { opacity: 1; }
+      100% { transform: translateX(570px); opacity: 0; }
+    }
+    /* one turn per 2*pi*r = 31.4px of travel */
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(6534deg); } }
+    @media (prefers-reduced-motion: reduce) { .roll, .spin { animation: none; } }
+  </style>
+  <line x1="4" y1="15.5" x2="596" y2="15.5" stroke="#8b949e" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <g stroke="#89ac95" stroke-width="1.1" stroke-linecap="round" fill="none">
+    <path d="M22 15l1.5-4M25 15v-5M28 15l-1.5-4"/>
+    <path d="M64 15l1.2-3M66.5 15v-4M69 15l-1.2-3"/>
+    <path d="M108 15l1-3M111 15l-1-4"/>
+    <path d="M150 15l1.5-4M153 15v-5M156 15l-1.5-4"/>
+    <path d="M196 15l1.2-3M198.5 15v-4M201 15l-1.2-3"/>
+    <path d="M240 15l1-3M243 15l-1-4"/>
+    <path d="M284 15l1.5-4M287 15v-5M290 15l-1.5-4"/>
+    <path d="M330 15l1.2-3M332.5 15v-4M335 15l-1.2-3"/>
+    <path d="M374 15l1-3M377 15l-1-4"/>
+    <path d="M418 15l1.5-4M421 15v-5M424 15l-1.5-4"/>
+    <path d="M462 15l1.2-3M464.5 15v-4M467 15l-1.2-3"/>
+    <path d="M508 15l1-3M511 15l-1-4"/>
+    <path d="M552 15l1.5-4M555 15v-5M558 15l-1.5-4"/>
+  </g>
+  <g class="roll">
+    <g transform="translate(15 10)">
+      <g class="spin">
+        <circle r="5" fill="#ffffff" stroke="#57606a" stroke-width="1"/>
+        <polygon points="0,-2 1.9,-0.6 1.2,1.6 -1.2,1.6 -1.9,-0.6" fill="#24292f"/>
+        <path d="M0-2v-2.8M1.9-0.6l2.6-0.9M1.2 1.6l1.6 2.2M-1.2 1.6l-1.6 2.2M-1.9-0.6l-2.6-0.9" stroke="#24292f" stroke-width="0.7"/>
+      </g>
+    </g>
+  </g>
+</svg>
