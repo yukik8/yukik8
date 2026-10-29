@@ -1,5 +1,5 @@
 <p>
-  <img src="assets/hello.svg" width="360" align="middle" alt="Hello, I'm Yuki 👋 — a tech girl 💻 &amp; football lover ⚽">&nbsp;&nbsp;
+  <img src="assets/hello.svg" width="360" align="middle" alt="Hello, I'm Yuki 👋">&nbsp;&nbsp;
   <img src="assets/soccer-goal.svg" width="340" align="middle" alt="A girl scores, then smiles and jumps for joy">
 </p>
 
