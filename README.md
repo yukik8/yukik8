@@ -1,6 +1,6 @@
 <p>
   <img src="assets/hello.svg" width="360" align="middle" alt="Hello, I'm Yuki 👋">&nbsp;&nbsp;
-  <img src="assets/soccer-goal.svg" width="340" align="middle" alt="A girl scores, then smiles and jumps for joy">
+  <!-- <img src="assets/soccer-goal.svg" width="340" align="middle" alt="A girl scores, then smiles and jumps for joy"> -->
 </p>
 
 What excites me most is turning ambiguous problems into systems people can actually use. I follow the problem wherever it leads — AI agents, backends, UI, kernel internals — and lately I'm particularly into AI agent harnesses.
